@@ -25,9 +25,9 @@
           modules = [
               # Modules
 	            disko.nixosModules.disko
-	            ./hardware-configuration.nix
-	            ./disko-config.nix
-	            ./configuration.nix
+	            ./homelab/hardware-configuration.nix
+	            ./homelab/disko-config.nix
+	            ./homelab/configuration.nix
 	          ];
         };
     }) nodes);

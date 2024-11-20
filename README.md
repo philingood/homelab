@@ -16,5 +16,5 @@ nix run github:nix-community/nixos-anywhere \
 > Run it locally on master0
 
 ```bash
-nixos-rebuild switch --flake github:rekcah/homelab#master0
+nixos-rebuild switch --flake github:philingood/homelab#master0
 ```
