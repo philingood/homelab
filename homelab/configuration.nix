@@ -107,9 +107,13 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     htop
+    helm
+    helmfile
     lazygit
     lazydocker
+    lynx
     neovim
+    tmux
     k3s
     cifs-utils
     nfs-utils
@@ -128,8 +132,10 @@
 
   programs.git = {
     enable = true;
-    userName  = "philingood";
-    userEmail = "98781376+philingood@users.noreply.github.com";
+    config = {
+    	user.name = "philingood";
+	user.email = "98781376+philingood@users.noreply.github.com";
+    };
   };
 
   # List services that you want to enable:
