@@ -107,11 +107,14 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     htop
+    lazygit
+    lazydocker
     neovim
     k3s
     cifs-utils
     nfs-utils
     git
+    gh
     sing-box
   ];
 
@@ -122,6 +125,12 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  programs.git = {
+    enable = true;
+    userName  = "philingood";
+    userEmail = "98781376+philingood@users.noreply.github.com";
+  };
 
   # List services that you want to enable:
 
