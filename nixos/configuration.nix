@@ -40,6 +40,12 @@
     #useXkbConfig = true; # use xkb.options in tty.
   };
 
+  security = {
+    sudo.configFile = ''
+    rekcah ALL=(ALL) NOPASSWD: ALL
+    '';
+  };
+
   # Fixes for longhorn
   systemd.tmpfiles.rules = [
     "L+ /usr/local/bin - - - - /run/current-system/sw/bin/"
@@ -100,11 +106,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     neovim
-     k3s
-     cifs-utils
-     nfs-utils
-     git
+    htop
+    neovim
+    k3s
+    cifs-utils
+    nfs-utils
+    git
+    sing-box
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
