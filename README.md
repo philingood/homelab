@@ -1,6 +1,6 @@
 # homelab
 
-Homelab configuration
+Homelab configuration for NixOS using NixOSAnywhere.
 
 ## Build
 
