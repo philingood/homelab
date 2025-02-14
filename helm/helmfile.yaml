@@ -9,6 +9,9 @@ repositories:
     url: https://kubernetes.github.io/ingress-nginx
   - name: bitnami
     url: https://charts.bitnami.com/bitnami
+  - name: gitlab
+    url: https://charts.gitlab.io
+
 ---
 releases:
   # Distributed storage
@@ -46,3 +49,11 @@ releases:
     version: 8.0.1
     values:
       - ./values/externaldns.values.yaml
+
+  # GitLab Runner
+  - name: gitlab-runner
+    namespace: gitlab
+    chart: gitlab/gitlab-runner
+    version: 0.40.0
+    values:
+      - ./values/gitlab-runner.values.yaml
