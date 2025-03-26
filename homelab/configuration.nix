@@ -52,12 +52,6 @@
   ];
   virtualisation.docker.logDriver = "json-file";
 
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
   services.k3s = {
     enable = true;
     role = "server";
@@ -136,6 +130,7 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   networking.firewall.enable = false;
+
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
