@@ -54,6 +54,6 @@ releases:
   - name: gitlab-runner
     namespace: gitlab
     chart: gitlab/gitlab-runner
-    version: 0.40.0
+    version: 0.73.3
     values:
       - ./values/gitlab-runner.values.yaml
