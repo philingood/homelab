@@ -5,9 +5,7 @@
 { config, lib, pkgs, meta, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-    ];
+  imports = [ ];
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''
@@ -96,20 +94,22 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    htop
+    cifs-utils
+    gcc
+    gh
+    git
     helm
     helmfile
-    lazygit
-    lazydocker
-    lynx
-    neovim
-    tmux
+    htop
     k3s
-    cifs-utils
+    lazydocker
+    lazygit
+    lynx
+    make
+    neovim
     nfs-utils
-    git
-    gh
     sing-box
+    tmux
   ];
 
   programs.git = {
