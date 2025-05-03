@@ -113,11 +113,12 @@
     lazydocker
     lazygit
     lynx
-    make
+    # make
     neovim
     nfs-utils
     sing-box
     tmux
+    vim
   ];
 
   programs.git = {
@@ -128,7 +129,7 @@
     };
   };
   programs.nixvim = {
-    enable = true;
+    enable = false;
     colorschemes.catppuccin.enable = true;
     plugins = {
       lualine.enable = true;
