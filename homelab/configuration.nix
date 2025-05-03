@@ -20,18 +20,26 @@
   networking = {
     hostName = meta.hostname; # Define your hostname.
     # Pick only one of the below networking options.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
     # Configure network proxy if necessary
-    # networking.proxy.default = "http://user:password@proxy:port/";
-    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+    # proxy.default = "http://user:password@proxy:port/";
+    # proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
     # Open ports in the firewall.
-    # networking.firewall.allowedTCPPorts = [ 80 ];
-    # networking.firewall.allowedUDPPorts = [ ... ];
+    # firewall.allowedTCPPorts = [ 80 ];
+    # firewall.allowedUDPPorts = [ ... ];
     # Or disable the firewall altogether.
     firewall.enable = false;
+
+    routes = [
+            {
+                address = "10.0.90.0";
+                prefixLength = 24;
+                via = "192.168.90.101";
+            }
+        ];
   };
 
   # Set your time zone.
